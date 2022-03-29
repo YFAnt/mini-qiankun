@@ -7,10 +7,14 @@
  */
 
 import { fetchResource } from "./fetch-resource";
+// export const fetchResource = async (url) =>
+//   await fetch(url).then((res) =>{
+//     return res.text()
+//   });
 
 export const importHtml = async (url) => {
-  console.log(url);
   const html = await fetchResource(url);
+  console.log(html)
   const template = document.createElement("div");
   template.innerHTML = html;
 
@@ -37,10 +41,11 @@ export const importHtml = async (url) => {
     const scripts = await getExternalScripts();
     const module = { exports: {} };
     // no-unused-vars
-    const exports = module.exports;
+    const exports = {};
     scripts.forEach((res) => {
       eval(res);
     });
+    console.log(exports)
     return module.exports;
   }
 

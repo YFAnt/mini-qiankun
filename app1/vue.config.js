@@ -1,8 +1,8 @@
-const { name } = require("../app2/package.json");
+const { name } = require("./package.json");
 
 module.exports = {
   devServer: {
-    port: 8081,
+    port: 8082,
     headers: {
       "Access-Control-Allow-Origin": "*",
     },

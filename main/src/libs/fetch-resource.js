@@ -1,2 +1,4 @@
 export const fetchResource = async (url) =>
-  await fetch(url).then((res) => res.text());
+  await fetch(url).then((res) =>{
+    return res.text()
+  });

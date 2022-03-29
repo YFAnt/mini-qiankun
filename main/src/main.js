@@ -8,13 +8,13 @@ Vue.config.productionTip = false;
 registerMicroApps([
   {
     name: "app1", // app name registered
-    entry: "//localhost:8081",
+    entry: "//localhost:8082",
     container: "#sub-app",
     activeRule: "/subapp/app1",
   },
   {
     name: "app2", // app name registered
-    entry: "//localhost:8082",
+    entry: "//localhost:8083",
     container: "#sub-app",
     activeRule: "/subapp/app2",
   },

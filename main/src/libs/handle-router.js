@@ -21,7 +21,7 @@ export const handlerRouter = async () => {
     await unmount(preApp);
   }
   /**
-   * 加载上一个路由
+   * 加载下一个路由
    */
   console.log(window.location.pathname, apps);
   const app = apps.find((item) => getNextRouter().startsWith(item.activeRule));
@@ -29,15 +29,15 @@ export const handlerRouter = async () => {
   if (!app) {
     return;
   }
-  //   3 获取子应用的html,js css
-  //   const html = await fetch(app.entry).then((res) => res.text());
-  //   console.log(html);
-  //   const container = document.querySelector(app.container);
-  //   container.innerHTML = html;
+  // //   3 获取子应用的html,js css
+  // const html = await fetch(app.entry).then((res) => res.text());
+  // console.log(html);
+  // const container = document.querySelector(app.container);
+  // container.innerHTML = html;
 
   const { template, execScripts } = await importHtml(app.entry);
   const container = document.querySelector(app.container);
-  //   console.log(template, getExternalScripts, execScripts);
+  // //   console.log(template, getExternalScripts, execScripts);
   container.appendChild(template);
 
   window.__POWERED_BY_QIANKUN__ = true;

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>这是app1</h1>
+    <h1 class="abc">这是app1</h1>
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
@@ -17,3 +17,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.abc{
+  color:  #abcdef;
+}
+</style>
